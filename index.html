@@ -136,7 +136,7 @@ button {
 
 <!-- Proposal Box -->
 <div id="proposalBox">
-  <h2>Will you go on a date with me tomorrow? 💖</h2>
+  <h2>Will you go on a date with me today? 💖</h2>
   <button onclick="yesAnswer()">Yes ❤️</button>
   <button onclick="moveNo(this)">No 😢</button>
 </div>
@@ -150,7 +150,7 @@ button {
 </div>
 
 <audio autoplay loop>
-  <source src="your-song.mp3" type="audio/mpeg">
+  <source src="song.mp3" type="audio/mpeg">
 </audio>
 
 <script>
@@ -179,9 +179,9 @@ function yesAnswer() {
     document.getElementById('dateOptions').style.display = 'block';
   })
   .catch(err => {
-    alert("Error 😢");
-    console.log(err);
-  });
+  alert("Error: " + err.message);
+  console.log(err);
+});
 }
 
 function moveNo(btn) {
